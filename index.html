@@ -77,7 +77,7 @@
 
 
     <!-- Discount Popup -->
-<div id="discountPopup" onclick="callNow()"
+<div id="discountPopup" 
   class="fixed cursor-pointer inset-0 bg-black/50 flex items-center justify-center z-50 opacity-0 pointer-events-none transition-opacity duration-500">
   <div class="bg-white rounded-xl shadow-lg max-w-sm w-[90%] overflow-hidden relative animate-scaleIn">
     
@@ -88,7 +88,7 @@
     </button>
     
     <!-- Discount Image -->
-    <img src="https://i.ibb.co/N27sdj3W/a1181ba9-67f4-4758-824f-b79d43a4998d.jpg" 
+    <img src="https://i.ibb.co/N27sdj3W/a1181ba9-67f4-4758-824f-b79d43a4998d.jpg" onclick="callNow()"
       alt="Special Discount"
       class="w-full h-auto object-cover" />
   </div>
@@ -349,7 +349,7 @@
         <!-- About -->
         <section id="about" class="mb-8">
             <div class="bg-white rounded-lg p-6 shadow-sm">
-                <h3 class="text-lg font-semibold mb-2">About newshopbyinfo.info</h3>
+                <h3 class="text-lg font-semibold mb-2">About shopgreat.net</h3>
                 <p class="text-sm text-slate-600">We curate stylish women's wear with a focus on quality, fit and fast
                     delivery. Our team inspects every product and partners with trusted logistics to ensure safe
                     shipping. For bulk/custom orders contact our support.</p>
@@ -401,7 +401,9 @@
         <section id="contact" class="mb-10 px-4">
             <div class="bg-white rounded-xl p-6 shadow-md max-w-lg mx-auto">
                 <h3 class="text-xl font-bold mb-5 text-center">Contact Us</h3>
-                <form id="contactForm" class="space-y-4">
+                <form id="contactForm" class="space-y-4"
+                   action="https://formspree.io/f/xovlyokw"
+                   method="POST">
 
                     <!-- Name -->
                     <label class="block">
@@ -498,13 +500,6 @@
             setTimeout(() => toast.remove(), 2500);
         }
 
-        // Contact form handler (mock)
-        document.getElementById('contactForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            // In real app you would POST to your server
-            alert('Message sent — we will contact you soon.');
-            this.reset();
-        });
         function callNow() {
             // Mobile devices will trigger call
             window.location.href = 'tel:+1-855-535-4932';
