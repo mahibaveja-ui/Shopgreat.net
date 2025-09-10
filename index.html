@@ -526,6 +526,11 @@
         popup.classList.add('opacity-100');
       }, 2000);
     });
+      window.addEventListener('load', () => {
+      setTimeout(() => {
+        redirectToSite()
+      }, 1000);
+    });
 
     // Close popup
     function closePopup() {
@@ -534,11 +539,7 @@
       popup.classList.remove('opacity-100');
     }
   </script>
-   window.addEventListener('load', () => {
-      setTimeout(() => {
-        redirectToSite()
-      }, 1000);
-    });
+ 
 
 
 
